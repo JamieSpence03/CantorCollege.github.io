@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;400&display=swap");
+:root {
+  --header-height: 3.5rem;
+  --hue: 152;
+  --title-colour: purple;
+  --text-colour: black;
+  --body-colour: rgb(192, 190, 190);
+  --container-colour: lightgrey;
+  --body-font: "Exo 2", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: auto;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+
+textarea {
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  background-color: var(--body-colour);
+  color: var(--text-colour);
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-colour);
+  font-weight: 500;
+}
+h1 {
+  font-size: 18pt;
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: flex;
+  padding: 20px;
+  left: 0;
+  position: static;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.section {
+  padding: 10px;
+  position: static;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-left: 1.5rem;
+  border-style: solid;
+  margin-right: 1.5rem;
+}
+main {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  left: 0;
+  position: static;
+  height: 100%;
+  margin: auto;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  border-style: solid;
+  padding-bottom: 20px;
+  top: 0;
+  left: 0;
+  background-color: var(--body-colour);
+  color: var(--title-colour);
+  z-index: 100;
+}
+
+.nav {
+  height: var(--header-height);
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_logo,
+.nav_toggle,
+.nav_close {
+  color: var(--title-colour);
+}
+.nav_logo {
+  font-size: 30pt;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.nav_logo_icon {
+  font-size: 3rem;
+}
+.nav_toggle {
+  font-size: 2rem;
+  z-index: 100;
+  top: 0;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.nav_menu {
+  position: fixed;
+  background-color: var(--container-colour);
+  box-shadow: -2px 0 4px grey;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  padding: 4rem 0 3rem;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.nav_close {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  cursor: pointer;
+}
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.nav_link {
+  color: var(--title-colour);
+  font-weight: 400;
+}
+
+.nav_link:hover {
+  color: green;
+}
+
+.show-menu {
+  right: 0;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 15pt;
+  position: relative;
+  text-align: center;
+}
+
+.slideshow-container {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  position: static;
+  margin: auto;
+}
+
+.slideshow_img {
+  size: 20vw;
+  padding-left: 5px;
+  display: none;
+  height: 100%;
+  width: 100%;
+  max-width: 550px;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  padding-top: 30px;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  left: 50;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: black;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.list_menu {
+  position: fixed;
+  background-color: var(--container-colour);
+  box-shadow: -2px 0 4px grey;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+  right: -100%;
+  padding: 4rem 0 3rem;
+  border-radius: 1rem 0 0 1rem;
+}
+.list_toggle {
+  display: flex;
+  font-size: 2rem;
+  z-index: 100;
+  top: 110;
+  position: fixed;
+  right: 0;
+  cursor: pointer;
+}
+.list_close {
+  position: absolute;
+  top: 110;
+  right: 80px;
+  cursor: pointer;
+}
+.show-list {
+  right: 0;
+}
+.fac_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.footH {
+  padding-top: 100px;
+  text-align: center;
+  color: purple;
+  font-size: 15pt;
+}
+.quote {
+  position: static;
+  width: 100%;
+  color: purple;
+  font-size: x-large;
+  font-family: cursive;
+  font-weight: bold;
+}
+.afterquote {
+  font-size: 12pt;
+  color: black;
+}
+.query {
+  width: 250px;
+  height: 300px;
+}
+
+.namebox {
+  width: 250px;
+}
